@@ -57,7 +57,7 @@ exports.login = (req, res, next) => {
         }).then(isEqual => {
             if (isEqual) {
                 const token = jwt.sign({
-                    id: loadedUser._id.toString(),
+                    id: loadedUser.id.toString(),
                     email: loadedUser.email,
                 }, "Hello World",
                     { expiresIn: '1h' });
