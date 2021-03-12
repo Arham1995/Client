@@ -3,7 +3,7 @@ const Sequelize = require('sequelize');
 const sequelize = require('../util/database');
 
 
-const Client = sequelize.define('client', {
+const SuperAdmin = sequelize.define('superAdmin', {
     id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
@@ -13,12 +13,10 @@ const Client = sequelize.define('client', {
     name: Sequelize.STRING,
     email: Sequelize.STRING,
     phone: Sequelize.STRING,
-    image: Sequelize.STRING,    
-    subscription_type: Sequelize.STRING,    
-    expiry: Sequelize.STRING,    
+    image: Sequelize.STRING,     
     status: Sequelize.STRING,    
     city: Sequelize.STRING,    
     Country: Sequelize.STRING,    
 });
 
-module.exports = Client;
+module.exports = SuperAdmin;

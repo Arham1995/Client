@@ -1,11 +1,11 @@
-const express = require("express");
-const app = express();
 const bodyParser = require("body-parser");
 const clientRoutes = require('./routes/client');
 const webAdminRoutes = require('./routes/webAdmin');
 const superAdminRoutes = require('./routes/superAdmin');
 const sequelize = require('./util/database');
+const express = require("express");
 
+const app = express();
 app.use(bodyParser.urlencoded({
     extended: true
 }));
