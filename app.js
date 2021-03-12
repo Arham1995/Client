@@ -7,9 +7,6 @@ const sequelize = require('./util/database');
 app.use(bodyParser.urlencoded({
     extended: true
 }));
-
-
-
 app.use(bodyParser.json());
 // const fs = require('fs');
 // fs.writeFileSync("hello.txt","Hello Node js");

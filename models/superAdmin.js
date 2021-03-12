@@ -14,12 +14,11 @@ const Client = sequelize.define('client', {
     email: Sequelize.STRING,
     phone: Sequelize.STRING,
     image: Sequelize.STRING,    
-    password: Sequelize.STRING,    
     subscription_type: Sequelize.STRING,    
     expiry: Sequelize.STRING,    
     status: Sequelize.STRING,    
     city: Sequelize.STRING,    
-    country: Sequelize.STRING,    
+    Country: Sequelize.STRING,    
 });
 
 module.exports = Client;
