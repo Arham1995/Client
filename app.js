@@ -1,7 +1,9 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
-const authRoutes = require('./routes/auth');
+const clientRoutes = require('./routes/client');
+const webAdminRoutes = require('./routes/webAdmin');
+const superAdminRoutes = require('./routes/superAdmin');
 const sequelize = require('./util/database');
 
 app.use(bodyParser.urlencoded({
@@ -12,7 +14,9 @@ app.use(bodyParser.json());
 // fs.writeFileSync("hello.txt","Hello Node js");
 
 
-app.use("/auth", authRoutes);
+app.use("/client", clientRoutes);
+app.use("/webAdmin", webAdminRoutes);
+app.use("/superAdmin", superAdminRoutes);
 
 sequelize.sync()
     .then(res => {
